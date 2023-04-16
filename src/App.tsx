@@ -8,17 +8,18 @@ import {
 
 import { Home } from "./pages/home";
 import { FavoriteMovies } from "./pages/favoritemovies";
-import { SearchResult } from "./pages/searchresult";
+
 import { UpcomingMovies } from "./pages/upcomingmovies";
 import { TopRatedMovies } from "./pages/topratedmovies";
 import { PopularMovies } from "./pages/popularmovies";
 import { NowPlayingMovies } from "./pages/nowplayingmovies";
 import Sidebar from "./components/sidebar";
+import SearchResult from "./pages/searchmovies";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div>
+      <div className="flex">
         <Sidebar />
 
         <Outlet />

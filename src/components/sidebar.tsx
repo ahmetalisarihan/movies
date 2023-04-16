@@ -1,31 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom"; // React Router'dan Link bileşenini import ediyoruz
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="w-48 bg-gray-200 h-full">
+    <div className="bg-gray-800 text-white h-screen w-1/4">
       <nav className="py-4">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+        <ul className="flex flex-col p-4">
+          <li className="py-2">
+            <NavLink className="hover:text-gray-400" to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/favoritemovies ">Favorite Movies</Link>
+            <NavLink className="hover:text-gray-400" to="/favoritemovies ">Favorite Movies</NavLink>
           </li>
-          <li>
-            <Link to="/searchresult">Search Result</Link>
+          <li className="py-2">
+            <NavLink className="hover:text-gray-400" to="/searchresult">Search Result</NavLink>
           </li>
-          <li>
-            <Link to="/nowplayingmovies">Now Playing Movies</Link>
+          <li className="py-2">
+            <NavLink className="hover:text-gray-400" to="/nowplayingmovies">Now Playing Movies</NavLink>
           </li>
-          <li>
-            <Link to="/upcomingmovies">Upcoming Movies</Link>
+          <li className="py-2">
+            <NavLink className="hover:text-gray-400" to="/upcomingmovies">Upcoming Movies</NavLink>
           </li>
-          <li>
-            <Link to="/popularmovies">Popular Movies</Link>
+          <li className="py-2">
+            <NavLink className="hover:text-gray-400" to="/popularmovies">Popular Movies</NavLink>
           </li>
-          <li>
-            <Link to="/topratedmovies">Top Rated Movies</Link>
+          <li className="py-2">
+            <NavLink className="hover:text-gray-400" to="/topratedmovies">Top Rated Movies</NavLink>
           </li>
         </ul>
       </nav>
