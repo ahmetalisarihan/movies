@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 
-function App() {
+import { Home } from "./pages/home";
+import { FavoriteMovies } from "./pages/favoritemovies";
+import { SearchResult } from "./pages/searchresult";
+import { UpcomingMovies } from "./pages/upcomingmovies";
+import { TopRatedMovies } from "./pages/topratedmovies";
+import { PopularMovies } from "./pages/popularmovies";
+import { NowPlayingMovies } from "./pages/nowplayingmovies";
+import Sidebar from "./components/sidebar";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Sidebar />
+
+        <Outlet />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favoritemovies" element={<FavoriteMovies />} />
+          <Route path="/searchresult" element={<SearchResult />} />
+          <Route path="/nowplayingmovies" element={<NowPlayingMovies />} />
+          <Route path="/upcomingmovies" element={<UpcomingMovies />} />
+          <Route path="/popularmovies" element={<PopularMovies />} />
+          <Route path="/topratedmovies" element={<TopRatedMovies />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
