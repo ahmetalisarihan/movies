@@ -8,7 +8,6 @@ interface MovieData {
     overview: string;
   }
   
-  // Arama sonuçları tipi
   type SearchResults = MovieData[];
   
 export const searchMovies = async (query: string): Promise<SearchResults> => {
@@ -39,5 +38,7 @@ export const getPopularMovies = async (): Promise<SearchResults> => {
     return [];
   }
 };
+
+
 
   

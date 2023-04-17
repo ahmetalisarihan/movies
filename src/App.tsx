@@ -6,7 +6,7 @@ import {
   Outlet,
 } from "react-router-dom";
 
-import { Home } from "./pages/home";
+import  Home  from "./pages/home";
 import { FavoriteMovies } from "./pages/favoritemovies";
 
 import { UpcomingMovies } from "./pages/upcomingmovies";
